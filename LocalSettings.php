@@ -130,3 +130,16 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+# Disable reading by anonymous users
+$wgGroupPermissions['*']['read'] = false;
+$wgGroupPermissions['*']['edit'] = false;
+
+# But allow them to read e.g., these pages:
+#$wgWhitelistRead =  array ( "Main Page", "Special:Userlogin", "Help:Contents", "-");
+ 
+# Like previous, but for French (be careful of encoding! save file as UTF-8!)
+# $wgWhitelistRead = array( ":Page Principale", "Special:Userlogin", "Aide en français"); 
+
+# Allow Jobs to be run
+$wgWhitelistRead = array( "Special:RunJobs" );
+

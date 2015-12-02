@@ -130,9 +130,12 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
-# Disable reading by anonymous users
+# Disable reading and editing by anonymous users
 $wgGroupPermissions['*']['read'] = false;
 $wgGroupPermissions['*']['edit'] = false;
+
+# Prevent new user registrations except by sysops
+$wgGroupPermissions['*']['createaccount'] = false;
 
 # But allow them to read e.g., these pages:
 #$wgWhitelistRead =  array ( "Main Page", "Special:Userlogin", "Help:Contents", "-");
